@@ -1,0 +1,72 @@
+{
+  "version": "1.0.0",
+  "synced": "2026-10-21",
+  "upstreams": {
+    "mattpocock": {
+      "repo": "mattpocock/skills",
+      "ref": "v1.3.1",
+      "commit": "24fe0ef7737efae15c87225755e9f6f5965e4888",
+      "license": "MIT"
+    },
+    "pstack": {
+      "repo": "cursor/plugins",
+      "path": "pstack",
+      "ref": "main",
+      "commit": "190d28736eff128ec94f502a22c7fe0c4b56cd37",
+      "license": "MIT"
+    },
+    "osmani": {
+      "repo": "addyosmani/agent-skills",
+      "ref": "main",
+      "commit": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+      "license": "MIT"
+    },
+    "thananon": {
+      "repo": "unknown",
+      "ref": "unknown",
+      "commit": "unknown",
+      "note": "Pre-existing skills, original source unknown. Not maintained upstream."
+    }
+  },
+  "skills": {
+    "ask-matt":                       { "upstream": "mattpocock", "path": "skills/engineering/ask-matt", "modified": false },
+    "blast-radius":                   { "upstream": "pstack", "path": "pstack/skills/blast-radius", "modified": false },
+    "code-review":                    { "upstream": "mattpocock", "path": "skills/engineering/code-review", "modified": false },
+    "codebase-design":                { "upstream": "mattpocock", "path": "skills/engineering/codebase-design", "modified": false },
+    "constraint-driven-development":  { "upstream": "osmani", "path": "skills/constraint-driven-development", "modified": false },
+    "correct":                        { "upstream": "pstack", "path": "pstack/skills/correct", "modified": false },
+    "debug-mantra":                   { "upstream": "thananon", "modified": false },
+    "diagnosing-bugs":                { "upstream": "mattpocock", "path": "skills/engineering/diagnosing-bugs", "modified": false },
+    "diagram-design":                 { "upstream": "thananon", "modified": false },
+    "domain-modeling":                { "upstream": "mattpocock", "path": "skills/engineering/domain-modeling", "modified": false },
+    "feature-tracker":                { "upstream": "custom", "modified": false },
+    "grill-me":                       { "upstream": "mattpocock", "path": "skills/productivity/grill-me", "modified": false },
+    "grill-with-docs":                { "upstream": "mattpocock", "path": "skills/engineering/grill-with-docs", "modified": false },
+    "grilling":                       { "upstream": "mattpocock", "path": "skills/productivity/grilling", "modified": false },
+    "handoff":                        { "upstream": "mattpocock", "path": "skills/productivity/handoff", "modified": false },
+    "implement":                      { "upstream": "mattpocock", "path": "skills/engineering/implement", "modified": false },
+    "implement-spec":                 { "upstream": "mattpocock", "path": "skills/engineering/implement-spec", "modified": false },
+    "improve-codebase-architecture":  { "upstream": "mattpocock", "path": "skills/engineering/improve-codebase-architecture", "modified": false },
+    "management-talk":                { "upstream": "thananon", "modified": false },
+    "post-mortem":                    { "upstream": "thananon", "modified": false },
+    "pr":                             { "upstream": "mattpocock", "path": "skills/engineering/pr", "modified": false },
+    "prototype":                      { "upstream": "mattpocock", "path": "skills/engineering/prototype", "modified": false },
+    "research":                       { "upstream": "mattpocock", "path": "skills/engineering/research", "modified": false },
+    "retro":                          { "upstream": "mattpocock", "path": "skills/engineering/retro", "modified": false },
+    "scrutinize":                     { "upstream": "thananon", "modified": true, "note": "Merged with DDD (osmani) fresh-context doubt mechanic. 6-step flow: Intent, Trace, Extract, Doubt, Reconcile, Report." },
+    "setup-matt-pocock-skills":       { "upstream": "mattpocock", "path": "skills/engineering/setup-matt-pocock-skills", "modified": false },
+    "shipping-and-launch":            { "upstream": "osmani", "path": "skills/shipping-and-launch", "modified": false },
+    "show-me-your-work":              { "upstream": "pstack", "path": "pstack/skills/show-me-your-work", "modified": false },
+    "tdd":                            { "upstream": "mattpocock", "path": "skills/engineering/tdd", "modified": false },
+    "teach":                          { "upstream": "mattpocock", "path": "skills/productivity/teach", "modified": false },
+    "to-questionnaire":               { "upstream": "mattpocock", "path": "skills/productivity/to-questionnaire", "modified": false },
+    "to-spec":                        { "upstream": "mattpocock", "path": "skills/engineering/to-spec", "modified": false },
+    "to-tickets":                     { "upstream": "mattpocock", "path": "skills/engineering/to-tickets", "modified": false },
+    "triage":                         { "upstream": "mattpocock", "path": "skills/engineering/triage", "modified": false },
+    "wait-what":                      { "upstream": "mattpocock", "path": "skills/productivity/wait-what", "modified": false },
+    "wayfinder":                      { "upstream": "mattpocock", "path": "skills/engineering/wayfinder", "modified": false },
+    "wizard":                         { "upstream": "mattpocock", "path": "skills/engineering/wizard", "modified": false },
+    "wrap-up":                        { "upstream": "custom", "modified": true, "note": "Updated menu: scrutinize, security-review, management-talk, shipping-and-launch. Delegates to /pr. Suggests /retro. Adds blast-radius check." },
+    "writing-for-agents":             { "upstream": "mattpocock", "path": "skills/productivity/writing-for-agents", "modified": false }
+  }
+}
