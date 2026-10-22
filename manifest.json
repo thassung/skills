@@ -50,7 +50,7 @@
     "improve-codebase-architecture":  { "upstream": "mattpocock", "path": "skills/engineering/improve-codebase-architecture", "modified": false },
     "management-talk":                { "upstream": "thananon", "modified": true, "note": "Changed to user-invoked." },
     "observability-and-instrumentation": { "upstream": "osmani", "path": "skills/observability-and-instrumentation", "modified": true, "note": "Changed to user-invoked." },
-    "post-mortem":                    { "upstream": "thananon", "modified": true, "note": "Changed to user-invoked." },
+    "post-mortem":                    { "upstream": "thananon", "modified": true, "note": "Reverted to model-invoked. Claude auto-detects when to offer a post-mortem." },
     "pr":                             { "upstream": "mattpocock", "path": "skills/engineering/pr", "modified": false },
     "prototype":                      { "upstream": "mattpocock", "path": "skills/engineering/prototype", "modified": false },
     "research":                       { "upstream": "mattpocock", "path": "skills/engineering/research", "modified": false },

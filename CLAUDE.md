@@ -60,21 +60,7 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-## 5. Write Files with Real Newlines
-
-**File content is prose, not an escaped string.**
-
-When writing or editing any file (especially Markdown), use actual line breaks. Never emit literal `\n` escape sequences — they produce a single garbled line that diffs badly and renders wrong.
-
-Don't hand-wrap prose into a fixed column. Write **one line per paragraph and per list item**, and let the editor soft-wrap it. Break a line only where the rendered output needs a break (between paragraphs, between list items, before a heading) — never just because a line got "too long". Long lines overflowing is correct.
-
-## 6. Diagrams Are Mermaid
-
-**When a document needs a diagram, write it as a ```mermaid code block.**
-
-Not ASCII art, not a generated image, not another diagram DSL. Mermaid renders on GitHub and in most Markdown viewers, and diffs as text.
-
-## 7. Prove It Works
+## 5. Prove It Works
 
 **Verify against the real artifact — run the feature, read the actual value, inspect the diff.**
 
@@ -83,13 +69,13 @@ Not ASCII art, not a generated image, not another diagram DSL. Mermaid renders o
 - Check the real state (database row, API response, rendered UI), not a proxy.
 - If you can't verify directly, say what you couldn't check.
 
-## 8. Blast-Radius Awareness
+## 6. Blast-Radius Awareness
 
 **Before shipping, consider what else this change could break beyond the diff.**
 
 When uncertain, prove safety by running the affected code paths. The diff shows what you changed; blast-radius thinking shows what your change touches.
 
-## 9. Encode Mistakes Structurally
+## 7. Encode Mistakes Structurally
 
 **When a mistake repeats, fix the architecture so it can't happen — don't just add another test.**
 
@@ -102,6 +88,6 @@ When starting work in a new project, consider running `/constraint-driven-develo
 ## Model Dispatch
 
 When dispatching subagents for parallel work:
-- **Haiku**: file location, simple lookups, mechanical transforms
-- **Sonnet**: clear tickets with well-defined scope
-- **Opus**: ambiguous tickets, architectural decisions, cross-cutting changes
+- **Haiku 5.5**: file location, simple lookups, mechanical transforms
+- **Sonnet 5.5**: clear tickets with well-defined scope
+- **Opus 5.5**: ambiguous tickets, architectural decisions, cross-cutting changes

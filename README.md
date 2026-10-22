@@ -32,10 +32,10 @@ skills/
 ### Invocation modes
 
 **Model-invoked** (Claude auto-detects when to use):
-blast-radius, code-review, codebase-design, correct, debug-mantra, diagnosing-bugs, domain-modeling, feature-tracker, grilling, improve-codebase-architecture, pr, prototype, research, scrutinize, show-me-your-work, tdd, wizard, wrap-up
+blast-radius, code-review, codebase-design, correct, debug-mantra, diagnosing-bugs, domain-modeling, feature-tracker, grilling, improve-codebase-architecture, post-mortem, pr, prototype, research, scrutinize, show-me-your-work, tdd, wizard, wrap-up
 
 **User-invoked** (`/command` only, zero context cost at rest):
-ask-matt, ci-cd-and-automation, constraint-driven-development, diagram-design, grill-me, grill-with-docs, handoff, implement, implement-spec, management-talk, observability-and-instrumentation, post-mortem, retro, setup-matt-pocock-skills, shipping-and-launch, teach, to-questionnaire, to-spec, to-tickets, triage, unslop, wait-what, wayfinder, writing-for-agents
+ask-matt, ci-cd-and-automation, constraint-driven-development, diagram-design, grill-me, grill-with-docs, handoff, implement, implement-spec, management-talk, observability-and-instrumentation, retro, setup-matt-pocock-skills, shipping-and-launch, teach, to-questionnaire, to-spec, to-tickets, triage, unslop, wait-what, wayfinder, writing-for-agents
 
 ## Setup on a new machine
 
@@ -48,6 +48,13 @@ powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
 Use `-Force` to overwrite existing skills/config. Use `-DryRun` to preview.
 
 The setup script flattens the source-group folders — `skills/mattpocock/ask-matt/` deploys to `~/.claude/skills/ask-matt/`.
+
+## Recommended Plugins
+
+The setup script deploys skills and guidelines. Plugins are account-level and installed separately — see [docs/plugins.md](docs/plugins.md) for the full list.
+
+**Core:** context-mode (context window protection)
+**Optional:** frontend-design, asana, miro
 
 ## Updating from upstream
 
