@@ -1,13 +1,11 @@
 # claude-env
 
-Personal Claude Code environment — skills, config, hooks, and guidelines packaged for version control and deployment.
+Curated Claude Code skills from multiple upstreams, with guidelines and provenance tracking.
 
 ## Structure
 
 ```
-CLAUDE.md            Karpathy Guidelines (deployed to ~/.claude/)
-settings.json        Claude Code settings
-hooks/               Hook scripts
+CLAUDE.md            Agent guidelines (deployed to ~/.claude/)
 scripts/             Setup and maintenance scripts
 docs/                Cheatsheet and reference docs
 manifest.json        Upstream provenance tracking

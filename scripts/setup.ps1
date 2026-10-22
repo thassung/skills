@@ -1,5 +1,5 @@
 # Claude Environment Setup Script
-# Deploys skills and portable config from this repo to ~/.claude/
+# Deploys skills and CLAUDE.md from this repo to ~/.claude/
 #
 # Usage: powershell -ExecutionPolicy Bypass -File setup.ps1
 # Run from the repo root
@@ -52,32 +52,18 @@ foreach ($group in $groups) {
     }
 }
 
-# Deploy portable config (CLAUDE.md, statusline, package.json)
-# settings.json is a REFERENCE -- review and merge manually on new machines
-# hooks/ and settings.local.json are machine-specific, not deployed
+# Deploy CLAUDE.md
 Write-Host ""
 Write-Host "Config:" -ForegroundColor Cyan
-$configFiles = @("CLAUDE.md", "package.json", "statusline.mjs")
-
-foreach ($filename in $configFiles) {
-    $src = Join-Path $RepoRoot $filename
-    if (-not (Test-Path $src)) { continue }
-    $dest = Join-Path $ClaudeDir $filename
+$claudeMd = Join-Path $RepoRoot "CLAUDE.md"
+if (Test-Path $claudeMd) {
+    $dest = Join-Path $ClaudeDir "CLAUDE.md"
     if ((Test-Path $dest) -and -not $Force) {
-        Write-Host "  SKIP  $filename (exists, use -Force to overwrite)" -ForegroundColor Yellow
+        Write-Host "  SKIP  CLAUDE.md (exists, use -Force to overwrite)" -ForegroundColor Yellow
     } else {
-        Write-Host "  COPY  $filename" -ForegroundColor Green
-        if (-not $DryRun) { Copy-Item -Path $src -Destination $dest -Force }
+        Write-Host "  COPY  CLAUDE.md" -ForegroundColor Green
+        if (-not $DryRun) { Copy-Item -Path $claudeMd -Destination $dest -Force }
     }
-}
-
-# Remind about settings.json
-$settingsSrc = Join-Path $RepoRoot "settings.json"
-if (Test-Path $settingsSrc) {
-    Write-Host ""
-    Write-Host "Note: settings.json is included as a reference." -ForegroundColor DarkYellow
-    Write-Host "  Review and merge hooks/plugins config manually:" -ForegroundColor DarkYellow
-    Write-Host "  $settingsSrc" -ForegroundColor DarkYellow
 }
 
 Write-Host ""

@@ -6,9 +6,12 @@ Thumbs.db
 desktop.ini
 node_modules/
 
-# Local-only config (machine-specific, managed by Claude Code app)
+# Machine-specific config (managed by Claude Code app, not shared)
+settings.json
 settings.local.json
 config.json
+package.json
+statusline.mjs
 
 # Plugin-managed hooks (deployed by plugins themselves)
 hooks/
