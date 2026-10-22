@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sung2/.claude/hooks/context-mode-cache-heal.mjs\""
+            "command": "node \"$HOME/.claude/hooks/context-mode-cache-heal.mjs\""
           }
         ]
       }
@@ -37,7 +37,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/sung2/.claude/statusline.mjs\""
+    "command": "node \"$HOME/.claude/statusline.mjs\""
   },
   "enabledPlugins": {
     "context7@claude-plugins-official": true,
