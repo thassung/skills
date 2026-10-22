@@ -2,7 +2,7 @@
 # Deploys skills, dotfiles, and hooks from this repo to ~/.claude/
 #
 # Usage: powershell -ExecutionPolicy Bypass -File setup.ps1
-# Run from the repo root (D:\claude-env\)
+# Run from the repo root
 
 param(
     [switch]$DryRun,

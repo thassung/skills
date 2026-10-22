@@ -42,8 +42,8 @@ ask-matt, ci-cd-and-automation, constraint-driven-development, diagram-design, g
 ## Setup on a new machine
 
 ```powershell
-git clone https://github.com/thassung/skills.git D:\claude-env
-cd D:\claude-env
+git clone https://github.com/thassung/skills.git <your-path>
+cd <your-path>
 powershell -ExecutionPolicy Bypass -File scripts\setup.ps1
 ```
 
