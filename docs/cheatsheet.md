@@ -1,47 +1,49 @@
 # Skill Cheatsheet
 
-## Main Flow: idea → ship
+## Main Flow: idea to ship
 
 ```
-/grill-with-docs → /prototype? → /to-spec → /to-tickets
-    → /implement (per ticket) OR /implement-spec (whole spec)
-    → /code-review → /pr → /wrap-up → /retro
+/grill-with-docs -> /prototype? -> /to-spec -> /to-tickets
+    -> /implement (per ticket) OR /implement-spec (whole spec)
+    -> /code-review -> /pr -> /wrap-up -> /retro
 ```
 
 ## On-Ramps
 
 | Situation | Flow |
 |---|---|
-| Bug | `/diagnosing-bugs` → `/implement` |
-| Triage | `/triage` → `/implement` |
-| Foggy effort | `/wayfinder` → `/to-spec` → ... |
+| Bug | `/diagnosing-bugs` -> `/implement` |
+| Triage | `/triage` -> `/implement` |
+| Foggy effort | `/wayfinder` -> `/to-spec` -> ... |
 
 ## Quality Gates (model-invoked, automatic)
 
-| Skill | When | Source |
-|---|---|---|
-| `blast-radius` | After big changes — proves safety beyond the diff | pstack |
-| `correct` | After repeated mistakes — encodes lessons in structure | pstack |
-| `show-me-your-work` | During long autonomous runs — decision trail | pstack |
+| Skill | When |
+|---|---|
+| `blast-radius` | After big changes -- proves safety beyond the diff |
+| `correct` | After repeated mistakes -- encodes lessons in structure |
+| `show-me-your-work` | During long autonomous runs -- decision trail |
 
 ## Team Process (user-invoked)
 
-| Skill | When | Source |
-|---|---|---|
-| `/constraint-driven-development` | New project — define quality bar | osmani |
-| `/shipping-and-launch` | Deploy — staged rollout with gates | osmani |
+| Skill | When |
+|---|---|
+| `/constraint-driven-development` | New project -- define quality bar |
+| `/shipping-and-launch` | Deploy -- staged rollout with gates |
+| `/ci-cd-and-automation` | Set up CI/CD pipelines and quality gates |
+| `/observability-and-instrumentation` | Add logging, metrics, tracing |
 
 ## Codebase Health
 
 ```
-/improve-codebase-architecture → generates ideas → main flow
+/improve-codebase-architecture -> generates ideas -> main flow
 ```
 
 ## Standalone
 
 ```
 /grill-me  /research  /prototype  /wizard  /teach
-/to-questionnaire  /wait-what
+/to-questionnaire  /wait-what  /unslop
 ```
 
 ## Vocabulary
@@ -54,27 +56,28 @@
 
 | Skill | Purpose |
 |---|---|
-| `/wrap-up` | Close-out: review menu → tracker sync → blast-radius → /pr → /retro |
-| `/retro` | Mine session for environment improvements |
+| `/wrap-up` | Close-out: review menu -> tracker sync -> blast-radius -> /pr -> /retro |
+| `/retro` | Mine session for environment improvements (incl. skill file edits) |
 
 ## Cross-Session State
 
 ```
-/feature-tracker — durable per-feature Markdown tracker
+/feature-tracker -- durable per-feature Markdown tracker
 ```
 
 ## External
 
 ```
-/scrutinize    — adversarial review with fresh-context doubt
-/post-mortem   — incident analysis
-/debug-mantra  — debugging methodology
-/management-talk — stakeholder narrative
-/diagram-design — architecture diagrams
+/scrutinize        -- adversarial review with fresh-context doubt
+/post-mortem       -- incident analysis
+/debug-mantra      -- debugging methodology
+/management-talk   -- stakeholder narrative
+/diagram-design    -- architecture diagrams
+/writing-for-agents -- reference for writing agent docs/skills
 ```
 
 ## Setup
 
 ```
-/setup-matt-pocock-skills — one-time env config for new machine
+/setup-matt-pocock-skills -- one-time env config for new machine
 ```
