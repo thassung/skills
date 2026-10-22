@@ -1,5 +1,5 @@
 # Claude Environment Setup Script
-# Deploys skills, dotfiles, and hooks from this repo to ~/.claude/
+# Deploys skills and portable config from this repo to ~/.claude/
 #
 # Usage: powershell -ExecutionPolicy Bypass -File setup.ps1
 # Run from the repo root
@@ -52,12 +52,14 @@ foreach ($group in $groups) {
     }
 }
 
-# Deploy dotfiles (now at repo root)
+# Deploy portable config (CLAUDE.md, statusline, package.json)
+# settings.json is a REFERENCE -- review and merge manually on new machines
+# hooks/ and settings.local.json are machine-specific, not deployed
 Write-Host ""
 Write-Host "Config:" -ForegroundColor Cyan
-$dotfiles = @("CLAUDE.md", "config.json", "package.json", "settings.json", "settings.local.json", "statusline.mjs")
+$configFiles = @("CLAUDE.md", "package.json", "statusline.mjs")
 
-foreach ($filename in $dotfiles) {
+foreach ($filename in $configFiles) {
     $src = Join-Path $RepoRoot $filename
     if (-not (Test-Path $src)) { continue }
     $dest = Join-Path $ClaudeDir $filename
@@ -69,26 +71,13 @@ foreach ($filename in $dotfiles) {
     }
 }
 
-# Deploy hooks
-$HooksSource = Join-Path $RepoRoot "hooks"
-$HooksTarget = Join-Path $ClaudeDir "hooks"
-
-if (Test-Path $HooksSource) {
+# Remind about settings.json
+$settingsSrc = Join-Path $RepoRoot "settings.json"
+if (Test-Path $settingsSrc) {
     Write-Host ""
-    Write-Host "Hooks:" -ForegroundColor Cyan
-    if (-not (Test-Path $HooksTarget)) {
-        if (-not $DryRun) { New-Item -ItemType Directory -Path $HooksTarget -Force | Out-Null }
-    }
-    $hooks = Get-ChildItem -Path $HooksSource -File
-    foreach ($hook in $hooks) {
-        $dest = Join-Path $HooksTarget $hook.Name
-        if ((Test-Path $dest) -and -not $Force) {
-            Write-Host "  SKIP  hooks/$($hook.Name) (exists, use -Force to overwrite)" -ForegroundColor Yellow
-        } else {
-            Write-Host "  COPY  hooks/$($hook.Name)" -ForegroundColor Green
-            if (-not $DryRun) { Copy-Item -Path $hook.FullName -Destination $dest -Force }
-        }
-    }
+    Write-Host "Note: settings.json is included as a reference." -ForegroundColor DarkYellow
+    Write-Host "  Review and merge hooks/plugins config manually:" -ForegroundColor DarkYellow
+    Write-Host "  $settingsSrc" -ForegroundColor DarkYellow
 }
 
 Write-Host ""
