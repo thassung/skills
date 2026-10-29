@@ -36,6 +36,23 @@ if (-not (Test-Path $SkillsTarget)) {
 
 Write-Host "Skills:" -ForegroundColor Cyan
 $groups = Get-ChildItem -Path $SkillsSource -Directory
+$repoSkills = @($groups | ForEach-Object { Get-ChildItem -Path $_.FullName -Directory } | ForEach-Object { $_.Name })
+
+# Remove skills an earlier run deployed that are no longer in the repo. Only names in the marker are touched,
+# so skills you installed by other means stay.
+$marker = Join-Path $SkillsTarget ".claude-env-deployed"
+if (Test-Path $marker) {
+    foreach ($name in Get-Content $marker) {
+        if ($name -and ($repoSkills -notcontains $name)) {
+            $stale = Join-Path $SkillsTarget $name
+            if (Test-Path $stale) {
+                Write-Host "  PRUNE $name (no longer in repo)" -ForegroundColor Magenta
+                if (-not $DryRun) { Remove-Item -Path $stale -Recurse -Force }
+            }
+        }
+    }
+}
+
 foreach ($group in $groups) {
     $skills = Get-ChildItem -Path $group.FullName -Directory
     foreach ($skill in $skills) {
@@ -51,6 +68,7 @@ foreach ($group in $groups) {
         }
     }
 }
+if (-not $DryRun) { Set-Content -Path $marker -Value $repoSkills -Encoding utf8 }
 
 # Deploy CLAUDE.md
 Write-Host ""

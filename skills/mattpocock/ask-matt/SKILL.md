@@ -10,6 +10,16 @@ You don't remember every skill, so ask.
 
 A **flow** is a path through the skills. Most paths run along one **main flow**, and two **on-ramps** merge onto it. Everything else is standalone, or a vocabulary layer that runs underneath.
 
+## Pick a mode
+
+Every flow that changes code also runs in a **mode**, and the mode sets how much of the design the change may touch. When you route the user to a flow, name the mode it fits and offer the command:
+
+- **`/mode surgical`**: the design is right and the task fixes or adjusts it. Smallest diff, scout rule inside the diff. Fits `/diagnosing-bugs`, `/triage` fixes, and a single small `/implement` ticket.
+- **`/mode rebuild`**: the task changes the design itself. The pstack principles as written: redesign from first principles, subtract first, migrate and delete in one wave. Fits a new feature through the main flow, `/wayfinder` builds, revamps, and work picked up from `/improve-codebase-architecture`.
+- **`/mode default`**: clears a forced mode, so the agent picks the mode per task again.
+
+Without a command, the agent picks a mode per task and announces it. Suggest forcing one when the task's shape is ambiguous ("a small fix" that will really need a redesign), or when the user wants one mode held for a whole session.
+
 ## The main flow: idea → ship
 
 The route most work travels. You have an idea and want it built.

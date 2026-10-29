@@ -1,5 +1,9 @@
 # wrap-up — Changelog
 
+## v1.2.0 — 2026-10-29
+
+- Step 5 tells the user to type `/retro` instead of invoking it. `retro` is user-invoked, so the agent cannot start it.
+
 ## v1.1.0 — 2026-10-21
 
 Updated 5-step session close-out:

@@ -65,4 +65,4 @@ Ask (zero analysis):
 
 > Want to run `/retro` to mine this session for environment improvements?
 
-If yes, invoke `/retro`. If no, wrap up is complete.
+If yes, tell the user to type `/retro`; it is user-invoked, so you cannot start it yourself. If no, wrap up is complete.

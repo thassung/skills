@@ -77,6 +77,10 @@ for group in "$REPO_ROOT"/skills/*/; do
   done
 done
 
+if ! python "$REPO_ROOT/scripts/validate.py" "$REPO_ROOT" "$@"; then
+  errors=$((errors + 1))
+fi
+
 echo ""
 if [ "$errors" -eq 0 ]; then
   echo "OK: ${#disk_skills[@]} skills validated, all checks passed"
