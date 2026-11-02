@@ -67,8 +67,7 @@ bash scripts/install-hooks.sh
 
 The setup script deploys skills and guidelines. Plugins are account-level and installed separately — see [docs/plugins.md](docs/plugins.md) for the full list.
 
-**Core:** context-mode (context window protection)
-**Optional:** frontend-design, asana, miro
+**Optional:** frontend-design, asana, miro, context-mode (only worth it if you use a lot of MCP servers)
 
 ## Updating from upstream
 

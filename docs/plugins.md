@@ -4,19 +4,21 @@ Plugins are account-level — install them once via the Claude Code CLI or app. 
 
 ## Core
 
-### context-mode
-
-Context window protection. Intercepts large fetches, indexes content out-of-context, and exposes `ctx_search` / `ctx_execute` / `ctx_batch_execute` for querying indexed material without filling the conversation window. Also auto-captures session events as searchable memory.
-
-```bash
-claude plugin add context-mode
-```
-
 ### anthropic-skills
 
 Anthropic's built-in skills bundle: deep-research, docs, xlsx/pptx/pdf handling, Google Workspace integration, schedule, and more. Ships with Claude Code but may need explicit enablement.
 
 ## Optional
+
+### context-mode
+
+Context window protection. Intercepts large fetches, indexes content out-of-context, and exposes `ctx_search` / `ctx_execute` / `ctx_batch_execute` for querying indexed material without filling the conversation window. Also auto-captures session events as searchable memory.
+
+Not needed by default: without it, context window shortage hasn't been a problem. It may be worth it if you run many MCP servers or tools with large outputs. See [research-context-mode.md](research-context-mode.md).
+
+```bash
+claude plugin add context-mode
+```
 
 ### frontend-design
 
@@ -46,11 +48,11 @@ claude plugin add miro
 
 ### context7
 
-Library documentation server — fetches up-to-date API docs for frameworks. Low value when context-mode already handles on-demand doc fetching. Requires OAuth that must be re-authorized.
+Library documentation server — fetches up-to-date API docs for frameworks. Requires OAuth that must be re-authorized.
 
 ### claude-mem
 
-Memory plugin. Superseded by context-mode's session memory and Claude Code's built-in memory system.
+Memory plugin. Superseded by Claude Code's built-in memory system.
 
 ### superpowers
 

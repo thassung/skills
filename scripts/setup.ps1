@@ -90,8 +90,8 @@ if ($DryRun) { Write-Host "(Dry run - no files were changed)" -ForegroundColor Y
 
 Write-Host ""
 Write-Host "Recommended plugins (install separately):" -ForegroundColor Cyan
-Write-Host "  claude plugin add context-mode        # context window protection"
 Write-Host "  claude plugin add frontend-design     # frontend/UI design guidance (optional)"
 Write-Host "  claude plugin add asana               # Asana integration (optional)"
+Write-Host "  claude plugin add context-mode        # context window protection (optional, worth it with many MCP servers)"
 Write-Host ""
 Write-Host "See docs/plugins.md for details." -ForegroundColor DarkGray
