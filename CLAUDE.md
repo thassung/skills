@@ -13,6 +13,13 @@ Code changes run in one of two modes. At the start of each task that changes cod
 
 When unsure, start surgical; it says when to escalate. A mode the user forces with `/mode surgical` or `/mode rebuild` holds until `/mode default` or another value. Questions, research, and reviews that change no code need no mode.
 
+## File links in replies
+
+The app opens a link relative to the session's root folder (the working directory the session started in), not the shell's current directory.
+
+- Never `cd` in Bash or PowerShell. Use `git -C <path>`, absolute paths, or a subshell `(cd x && ...)`, so the working directory never drifts.
+- Write each link's path relative to the session root, e.g. `[report](.scratch/catch-up/2026-11-13.md)` from `D:\MOSIP`. For a file outside the session's folders, give the absolute path in one piece.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**

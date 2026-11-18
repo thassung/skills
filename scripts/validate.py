@@ -58,7 +58,16 @@ for f in [ROOT / "CLAUDE.md", *sorted(ROOT.glob("skills/custom/mode/*.md"))]:
         if f"principle-{n}" not in skills:
             errors.append(f"{f.relative_to(ROOT)}: points at principle-{n}, which does not exist")
 
-# 4. --live: the deployed copy matches the repo.
+# 4. The router must be able to reach skills it doesn't name: user-invoked skills are hidden from the model's skill list.
+router = (ROOT / "skills/mattpocock/ask-matt/SKILL.md").read_text(encoding="utf-8")
+if "~/.claude/skills/*/SKILL.md" not in router:
+    errors.append("skills/mattpocock/ask-matt/SKILL.md: lost its 'Anything not named above' fallback that scans ~/.claude/skills/*/SKILL.md")
+cheatsheet = (ROOT / "docs/cheatsheet.md").read_text(encoding="utf-8")
+for n in sorted(non_principle):
+    if not re.search(rf"/{re.escape(n)}\b|`{re.escape(n)}`", cheatsheet):
+        errors.append(f"docs/cheatsheet.md: does not name '{n}'")
+
+# 5. --live: the deployed copy matches the repo.
 if LIVE:
     target = Path.home() / ".claude"
     def same_tree(a, b):

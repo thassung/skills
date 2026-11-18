@@ -100,6 +100,10 @@ Off the main flow entirely.
 - **`/teach`**: learn a concept over multiple sessions, using the current directory as a stateful workspace.
 - **`/writing-for-agents`** is the reference for writing documents agents consume: skills, AGENTS.md, pointed-at docs.
 
+## Anything not named above
+
+This map covers the core engineering flow only. The repo holds more skills (adversarial review, parallel workers, benchmarks, close-out, writing), and user-invoked ones are hidden from your skill list, so they never show up unless you look. When the map has no fit, or the user asks what to run to validate, review, or finish work, read the `name` and `description` frontmatter of every `~/.claude/skills/*/SKILL.md`, including the ones with `disable-model-invocation: true`, and recommend from those. Name each as a `/command`; the user types it.
+
 ## Precondition
 
 **`/setup-matt-pocock-skills`**: run before your first engineering flow to configure the issue tracker, triage labels, and doc layout the other skills assume. Custom issue trackers also work.

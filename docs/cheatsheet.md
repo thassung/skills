@@ -18,10 +18,14 @@
 | Triage | `/triage` -> `/implement` |
 | Foggy effort | `/wayfinder` -> `/to-spec` -> ... (rebuild mode) |
 
+`/grilling` is the interview under `/grill-with-docs` and `/grill-me`; use it bare when you want no wrapper.
+
 ## Quality Gates (model-invoked, automatic)
 
 | Skill | When |
 |---|---|
+| `tdd` | Building or fixing test-first, one red-green slice at a time |
+| `scrutinize` | Review of a plan, PR, or change by a fresh-context reviewer who tries to defeat your conclusion |
 | `blast-radius` | After big changes -- proves safety beyond the diff |
 | `correct` | After repeated mistakes -- encodes lessons in structure |
 | `show-me-your-work` | During long autonomous runs -- decision trail |
@@ -37,7 +41,6 @@ Default fan-out is four subagents, one each on haiku, sonnet, opus, and fable, u
 | `/swarm` | Coverage, races, or exploration -- N workers, one report |
 | `/arena` | Design or code bakeoff -- pick a base, graft the best of the rest |
 | `/interrogate` | Adversaries try to break a change; only findings proven by a run survive |
-| `/scrutinize` | Single-reviewer adversarial review with fresh-context doubt |
 
 ## Verification (user-invoked)
 
@@ -120,7 +123,7 @@ After a long session gets compacted, a forced mode may need re-typing. `/ask-mat
 
 | Material | Loaded |
 |---|---|
-| `CLAUDE.md`: shared rules, the mode router, the index of shared principles | Every session (6.3 KB) |
+| `CLAUDE.md`: shared rules, the mode router, the index of shared principles | Every session (6.8 KB) |
 | `mode` skill router | When a mode is picked or forced (1.2 KB) |
 | `surgical.md` or `rebuild.md` | Only the chosen one (surgical 1.7 KB, rebuild 2.6 KB) |
 | Five rebuild principle files: redesign, subtract, outcome-oriented, laziness, sequence | When rebuild starts (5.0 KB) |

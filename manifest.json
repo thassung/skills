@@ -30,7 +30,7 @@
   },
   "skills": {
     "arena":                                               { "upstream": "pstack", "path": "pstack/skills/arena", "modified": true, "note": "Models via Agent tool model param; same-family cross-judge noted." },
-    "ask-matt":                                            { "upstream": "mattpocock", "path": "skills/engineering/ask-matt", "modified": true, "note": "Added \"Pick a mode\" section routing flows to /mode surgical and /mode rebuild." },
+    "ask-matt":                                            { "upstream": "mattpocock", "path": "skills/engineering/ask-matt", "modified": true, "note": "Added \"Pick a mode\" section routing flows to /mode surgical and /mode rebuild. Added \"Anything not named above\" fallback that scans deployed skill frontmatter." },
     "benchmark-checklist":                                 { "upstream": "pstack", "path": "pstack/skills/benchmark-checklist", "modified": true, "note": "Changed to model-invoked (quality gate)." },
     "blast-radius":                                        { "upstream": "pstack", "path": "pstack/skills/blast-radius", "modified": true, "note": "Changed to model-invoked (quality gate).", "base_commit": "190d28736eff128ec94f502a22c7fe0c4b56cd37" },
     "bro":                                                 { "upstream": "pstack", "path": "pstack/skills/bro", "modified": false },
@@ -51,7 +51,7 @@
     "grilling":                                            { "upstream": "mattpocock", "path": "skills/productivity/grilling", "modified": false },
     "handoff":                                             { "upstream": "mattpocock", "path": "skills/productivity/handoff", "modified": false },
     "implement":                                           { "upstream": "mattpocock", "path": "skills/engineering/implement", "modified": false },
-    "implement-spec":                                      { "upstream": "mattpocock", "path": "skills/engineering/implement-spec", "modified": false },
+    "implement-spec":                                      { "upstream": "mattpocock", "path": "skills/engineering/implement-spec", "modified": true, "note": "Step 5: orchestrator puts unverified or user-call lines from implementer reports to the user." },
     "improve-codebase-architecture":                       { "upstream": "mattpocock", "path": "skills/engineering/improve-codebase-architecture", "modified": false },
     "interrogate":                                         { "upstream": "pstack", "path": "pstack/skills/interrogate", "modified": true, "note": "Inlined in-your-own-words; Cursor model rule dropped." },
     "maintain-formal-verification-skill":                  { "upstream": "pstack", "path": "pstack/skills/maintain-formal-verification-skill", "modified": false },
