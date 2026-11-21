@@ -14,10 +14,10 @@ skills/
   pstack/            17 skills + 24 principles from cursor/plugins (pstack)
   osmani/            4 skills from addyosmani/agent-skills
   thananon/          5 pre-existing skills
-  custom/            3 custom skills (incl. the working-mode switch)
+  custom/            4 custom skills (incl. the working-mode switch)
 ```
 
-## Skills (56, plus 24 principles)
+## Skills (57, plus 24 principles)
 
 | Source | Skills | Count |
 |---|---|---|
@@ -25,7 +25,7 @@ skills/
 | cursor/plugins (pstack) | arena*, benchmark-checklist*, blast-radius*, bro, correct*, create-formal-verification-skill, create-verification-skill*, interrogate*, maintain-formal-verification-skill, maintain-verification-skill*, recall*, sharpen, show-me-your-work*, statechart*, swarm*, technical-writing, unslop | 17 |
 | addyosmani/agent-skills | ci-cd-and-automation*, constraint-driven-development*, observability-and-instrumentation*, shipping-and-launch* | 4 |
 | thananon | debug-mantra, diagram-design*, management-talk*, post-mortem*, scrutinize* | 5 |
-| custom | feature-tracker*, mode, wrap-up* | 3 |
+| custom | feature-tracker*, mode, orchestrator, wrap-up* | 4 |
 
 \* = modified from upstream (see each skill's CHANGELOG.md). pstack skills that came from Cursor were adapted to Claude Code: model routing, Agent tool options, and `.cursor/` paths.
 
@@ -43,7 +43,7 @@ A skill is user-invoked when its `SKILL.md` frontmatter has `disable-model-invoc
 benchmark-checklist, blast-radius, code-review, codebase-design, correct, debug-mantra, diagnosing-bugs, domain-modeling, feature-tracker, grilling, mode, post-mortem, pr, prototype, research, scrutinize, show-me-your-work, tdd, wizard, wrap-up
 
 **User-invoked** (`/command` only, zero context cost at rest):
-arena, ask-matt, bro, ci-cd-and-automation, constraint-driven-development, create-formal-verification-skill, create-verification-skill, diagram-design, grill-me, grill-with-docs, handoff, implement, implement-spec, improve-codebase-architecture, interrogate, maintain-formal-verification-skill, maintain-verification-skill, management-talk, observability-and-instrumentation, recall, retro, setup-matt-pocock-skills, sharpen, shipping-and-launch, statechart, swarm, teach, technical-writing, to-questionnaire, to-spec, to-tickets, triage, unslop, wait-what, wayfinder, writing-for-agents, plus all 24 `principle-*` skills
+arena, ask-matt, bro, ci-cd-and-automation, constraint-driven-development, create-formal-verification-skill, create-verification-skill, diagram-design, grill-me, grill-with-docs, handoff, implement, implement-spec, improve-codebase-architecture, interrogate, maintain-formal-verification-skill, maintain-verification-skill, management-talk, observability-and-instrumentation, orchestrator, recall, retro, setup-matt-pocock-skills, sharpen, shipping-and-launch, statechart, swarm, teach, technical-writing, to-questionnaire, to-spec, to-tickets, triage, unslop, wait-what, wayfinder, writing-for-agents, plus all 24 `principle-*` skills
 
 ## Setup on a new machine
 

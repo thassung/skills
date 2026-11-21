@@ -5,6 +5,7 @@
 ```
 /sharpen? -> /grill-with-docs -> /prototype? -> /to-spec -> /to-tickets
     -> /implement (per ticket) OR /implement-spec (whole spec)
+       OR /orchestrator (whole spec + per-ticket model, review gates, fix loop)
     -> /code-review -> /pr -> /wrap-up -> /retro
 ```
 
