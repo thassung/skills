@@ -30,7 +30,7 @@
   },
   "skills": {
     "arena":                                               { "upstream": "pstack", "path": "pstack/skills/arena", "modified": true, "note": "Models via Agent tool model param; same-family cross-judge noted." },
-    "ask-matt":                                            { "upstream": "mattpocock", "path": "skills/engineering/ask-matt", "modified": true, "note": "Added \"Pick a mode\" section routing flows to /mode surgical and /mode rebuild. Added \"Anything not named above\" fallback that scans deployed skill frontmatter." },
+    "ask-matt":                                            { "upstream": "mattpocock", "path": "skills/engineering/ask-matt", "modified": true, "note": "Added \"Pick a mode\" section routing flows to /mode surgical and /mode rebuild. Added \"Anything not named above\" fallback that scans deployed skill frontmatter. Added /orchestrator as a third way to work tickets." },
     "benchmark-checklist":                                 { "upstream": "pstack", "path": "pstack/skills/benchmark-checklist", "modified": true, "note": "Changed to model-invoked (quality gate)." },
     "blast-radius":                                        { "upstream": "pstack", "path": "pstack/skills/blast-radius", "modified": true, "note": "Changed to model-invoked (quality gate).", "base_commit": "190d28736eff128ec94f502a22c7fe0c4b56cd37" },
     "bro":                                                 { "upstream": "pstack", "path": "pstack/skills/bro", "modified": false },
