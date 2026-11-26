@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.2.0 — 2026-11-26
+
+### Added
+- orchestrator (custom, v1.1.0): `/implement-spec` with a model and effort per ticket, `scrutinize` and `blast-radius` gates per ticket, `code-review` per wave, and a final review-fix loop capped at 5 iterations
+- ask-matt routes to `/orchestrator` as a third way to work tickets, and falls back to every deployed skill's frontmatter when its map has no fit
+
+### Changed
+- Modes are decided while planning, not only while coding. Grilling calls `mode` first and starts surgical; switching to rebuild loads `rebuild.md`'s planning principles. A spec records `Mode:` as its first Implementation Decision, tickets repeat it, a wayfinder map keeps it in Notes, and implementers (including `/orchestrator`'s) use the spec's mode instead of picking one.
+- surgical now covers new features that fit an existing seam; rebuild is for features that need a data shape, seam, or module the code doesn't have (CLAUDE.md, ask-matt v1.3.0)
+- grill-with-docs: calls `mode` first when the plan is a code change (now marked modified from upstream)
+- context-mode demoted from core to an optional plugin
+
+### Fixed
+- Local edits to deployed skills backported to the repo; cheatsheet corrections
+
 ## v1.1.0 — 2026-10-22
 
 ### Added
