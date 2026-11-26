@@ -47,7 +47,7 @@
     "domain-modeling":                                     { "upstream": "mattpocock", "path": "skills/engineering/domain-modeling", "modified": false },
     "feature-tracker":                                     { "upstream": "custom", "modified": true, "note": "Added check-status.sh script." },
     "grill-me":                                            { "upstream": "mattpocock", "path": "skills/productivity/grill-me", "modified": false },
-    "grill-with-docs":                                     { "upstream": "mattpocock", "path": "skills/engineering/grill-with-docs", "modified": false },
+    "grill-with-docs":                                     { "upstream": "mattpocock", "path": "skills/engineering/grill-with-docs", "modified": true, "note": "Calls mode first when the plan is a code change." },
     "grilling":                                            { "upstream": "mattpocock", "path": "skills/productivity/grilling", "modified": false },
     "handoff":                                             { "upstream": "mattpocock", "path": "skills/productivity/handoff", "modified": false },
     "implement":                                           { "upstream": "mattpocock", "path": "skills/engineering/implement", "modified": false },
