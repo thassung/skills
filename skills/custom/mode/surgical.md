@@ -13,6 +13,12 @@ These rules are Karpathy's, plus the parts of five pstack principles that fit a 
 - **Levers only for repetition.** Script an edit only when it repeats or its result must be rerun to be trusted. A one-off fix stays by hand.
 - Remove imports, variables, and functions that your change made unused.
 
+## Planning (grill, spec, tickets)
+
+- **The spec names the existing pattern or seam the change follows.** That line is what makes it surgical.
+- **Tickets:** cleanup first (subtract-before-you-add), each ticket ends green (sequence-verifiable-units), and a repeated edit gets a script (build-the-lever).
+- The design-shaping principles (redesign-from-first-principles, foundational-thinking, exhaust-the-design-space) don't apply. Needing one is the signal to switch to rebuild.
+
 ## Escalate
 
 Stop and tell the user when the fix needs the design to change: the bug is the design itself, or the fix would add one more branch to a conditional that keeps growing. Recommend `/mode rebuild` and give the reason. Don't switch silently.

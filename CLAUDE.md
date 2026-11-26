@@ -6,7 +6,7 @@ Behavioral guidelines to reduce common LLM coding mistakes. The numbered rules a
 
 ## Modes
 
-Code changes run in one of two modes. At the start of each task that changes code, invoke the `mode` skill with the mode you pick, and open your reply with one line saying which and why.
+Code changes run in one of two modes. At the start of each task that changes code or plans a code change (grilling a feature, writing its spec or tickets), invoke the `mode` skill with the mode you pick, and open your reply with one line saying which and why. A spec records its mode, and work from that spec uses it.
 
 - **surgical**: hotfixes, bugfixes, and small changes to behavior that mostly works. Smallest diff, scout rule inside the diff.
 - **rebuild**: new features, new versions of a feature, revamps, and migrations, where surgical changes can't reach the goal. The pstack principles as written.

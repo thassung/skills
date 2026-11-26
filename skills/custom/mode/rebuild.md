@@ -4,6 +4,13 @@ The design has to change. Build what you would have built if the new requirement
 
 Every pstack principle applies here as written. Where a rule below and a principle file seem to differ, the principle file is the authority. Before you start, read these in full: `~/.claude/skills/principle-redesign-from-first-principles/SKILL.md`, `principle-subtract-before-you-add`, `principle-outcome-oriented-execution`, `principle-laziness-protocol`, and `principle-sequence-verifiable-units`.
 
+## Planning (grill, spec, tickets)
+
+The design is decided here, so the design-shaping principles apply here, not only at build time.
+
+- **Grill and spec:** read `principle-redesign-from-first-principles`, `principle-foundational-thinking`, `principle-model-the-domain`, and `principle-type-system-discipline`, and turn them into questions: what would we build if this had been there from day one, what is the data shape, where is the boundary. With no precedent in the codebase, read `principle-exhaust-the-design-space` and prototype before the spec settles it. On scope, `principle-experience-first`.
+- **Tickets:** read `principle-subtract-before-you-add`, `principle-migrate-callers-then-delete-legacy-apis`, and `principle-outcome-oriented-execution`. Prefactor and deletion tickets come first; a migration ends in a ticket that deletes the old form; what may stay broken between tickets is declared in the spec.
+
 ## Rules
 
 - **Redesign, don't bolt on.** Read every affected file. Ask what you would build from scratch with this requirement, then propagate it through every reference: types, tests, docs, examples. Think about the whole redesign, then deliver it incrementally.
